@@ -15,7 +15,7 @@ pkgconfig_DATA += libnl-cli-3.0.pc
 endif
 
 
-pkgsysconfdir = ${sysconfdir}/libnl
+pkgsysconfdir = ${sysconfdir}/libnl-3
 pkgsysconf_DATA = etc/pktloc etc/classid
 
 EXTRA_DIST = \
