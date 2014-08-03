@@ -1,0 +1,60 @@
+Source: libnl3
+Section: net
+Priority: optional
+Maintainer: Heiko Stuebner <mmind@debian.org>
+DM-Upload-Allowed: yes
+Build-Depends: debhelper (>= 7), cdbs, doxygen, bison, flex, mscgen, graphviz,
+ python-pygments, xmlstarlet, texlive-latex-base, asciidoc, automake,
+ source-highlight, autoconf, ghostscript, dh-autoreconf
+Standards-Version: 3.9.3
+Homepage: http://people.suug.ch/~tgr/libnl/
+
+Package: libnl-3-200
+Architecture: linux-any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: library for dealing with netlink sockets 
+ This is a library for applications dealing with netlink sockets.
+ The library provides an interface for raw netlink messaging and various
+ netlink family specific interfaces.
+
+Package: libnl-genl-3-200
+Architecture: linux-any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libnl-3-200 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Description: library for dealing with netlink sockets - generic netlink
+ This is a library for applications dealing with netlink sockets.
+ The library provides an interface for raw netlink messaging and various
+ netlink family specific interfaces.
+ .
+ API to the generic netlink protocol, an extended version of the netlink
+ protocol.
+
+Package: libnl-3-dev
+Architecture: linux-any
+Section: libdevel
+Depends: libnl-3-200 (= ${binary:Version}), ${misc:Depends}
+Conflicts: libnl-dev, libnl2-dev
+Breaks: libnl3-dev
+Replaces: libnl3-dev
+Description: development library and headers for libnl-3
+ This is a library for applications dealing with netlink sockets.
+ The library provides an interface for raw netlink messaging and various
+ netlink family specific interfaces.
+ .
+ This package contains the headers needed by all libraries and the  files
+ that are needed to build applications using libnl3.
+
+Package: libnl-genl-3-dev
+Architecture: linux-any
+Section: libdevel
+Depends: libnl-3-dev (= ${binary:Version}), libnl-genl-3-200 (= ${binary:Version}), ${misc:Depends}
+Description: development library and headers for libnl-genl-3
+ This is a library for applications dealing with netlink sockets.
+ The library provides an interface for raw netlink messaging and various
+ netlink family specific interfaces.
+ .
+ This package contains the files that are needed to build applications using
+ libnl-genl-3.

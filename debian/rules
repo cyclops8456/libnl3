@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+DEB_BUILDDIR = debian/build
+DEB_MAKE_FLAVORS = main
+
+TG_BRANCHES := debian/etc-libnl-3,debian/out-of-tree,fixes/dot-threads
+
+-include /usr/share/topgit/tg2quilt.mk
+
+# to export the patch series use
+#	debian/rules tg-clean
+#	debian/rules tg-export
+
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/autoreconf.mk
+include /usr/share/cdbs/1/class/autotools.mk
+
+CFLAGS += $(if $(findstring,$(cdbs_make_curflavor)),-Os)
+
+DEB_DH_MAKESHLIBS_ARGS_libnl-3-200 := -V"libnl-3-200 (>= $(DEB_UPSTREAM_VERSION))"	
+DEB_DH_MAKESHLIBS_ARGS_libnl-genl-3-200 := -V"libnl-genl-3-200 (>= $(DEB_UPSTREAM_VERSION))"
+
+DEB_MAKE_DESTDIRSKEL = $(CURDIR)/debian/tmp
+
+clean::
+	# from some unknown reason CDBS does not remove the builddir
+	rm -rf $(DEB_BUILDDIR)
