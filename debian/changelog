@@ -1,3 +1,9 @@
+libnl3 (3.2.25vyos2+lithium2) unstable; urgency=low
+
+  * Update maintainer address
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Wed, 24 Dec 2014 07:24:43 +0000
+ 
 libnl3 (3.2.25vyos2+lithium1) unstable; urgency=low
 
   * New branch
