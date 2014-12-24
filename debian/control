@@ -1,7 +1,7 @@
 Source: libnl3
 Section: net
 Priority: optional
-Maintainer: Heiko Stuebner <mmind@debian.org>
+Maintainer: VyOS Package Maintainers <maintainers@vyos.net>
 DM-Upload-Allowed: yes
 Build-Depends: debhelper (>= 7), cdbs, doxygen, bison, flex, mscgen, graphviz,
  python-pygments, xmlstarlet, texlive-latex-base, asciidoc, automake,
