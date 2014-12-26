@@ -1,3 +1,9 @@
+libnl3 (3.2.25+vyos2+lithium3) unstable; urgency=low
+
+  * Fix versioning
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Fri, 26 Dec 2014 18:07:36 +0000
+ 
 libnl3 (3.2.25vyos2+lithium2) unstable; urgency=low
 
   * Update maintainer address
