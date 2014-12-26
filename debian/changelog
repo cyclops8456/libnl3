@@ -1,3 +1,9 @@
+libnl3 (3.2.25+vyos1+helium2) unstable; urgency=low
+
+  * Fix versioning
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Fri, 26 Dec 2014 17:51:22 +0000
+ 
 libnl3 (3.2.25vyos1+helium1) unstable; urgency=low
 
   * New upstream release
